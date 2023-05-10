@@ -8,9 +8,12 @@
 import Foundation
 import CameLLM
 
-public protocol ModelTypeScopedUtils {
+public protocol ModelTypeScopedCardUtils {
   associatedtype CardType
 
   func getModelCard(forFileAt fileURL: URL) throws -> CardType?
+}
+
+public protocol ModelTypeScopedValidationUtils {
   func validateModel(at fileURL: URL) throws
 }
